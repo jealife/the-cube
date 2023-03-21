@@ -1,0 +1,302 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;600;700;800;900&display=swap');
+
+
+html,
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+    scroll-behavior: smooth;
+}
+
+body {
+    overflow: overlay;
+}
+
+.header {
+    background: #3461c1;
+    background: linear-gradient(135deg,
+            #f461c1 0%, #4579e2, #3461c1 100%);
+    min-height: 90vh;
+}
+
+.shape1 {
+
+    width: 15%;
+    position: absolute;
+    top: 0%;
+}
+
+.shape2 {
+
+    width: 13%;
+    position: absolute;
+    top: 50%;
+    right: 2%;
+}
+
+.shape3 {
+
+    width: 10%;
+    position: absolute;
+    top: 5%;
+    right: 40%;
+}
+
+.container {
+    padding: 2rem 5rem 2rem 5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.conthead-Child {
+    z-index: 1;
+    flex: 1;
+}
+
+.child1 p {
+    color: #ffff;
+    font-size: 1.5em;
+}
+
+.child1 h1 {
+    color: #3461c1;
+    font-weight: 900;
+    font-size: 5.5rem;
+    text-shadow: -1px -1px 2px rgba(255, 255, 255, 0.55);
+}
+
+.btn {
+    margin: 1em 0 0 0;
+    width: 200px;
+    border: none;
+    border-radius: 25px;
+    padding: 1.2rem;
+    background-color: #3461c1;
+    color: #fff;
+    font-size: 1.2rem;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.btn:hover {
+    animation: bounceIn;
+    animation-duration: 1s;
+    background-color: #f461c1;
+
+}
+
+.floating {
+    animation-name: floating;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+    margin-left: 30px;
+    margin-top: 5px;
+}
+
+.main {
+    min-height: 90vh;
+    padding: 0 2rem 2rem 2rem;
+    color: #ffff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.main-child1,
+.main-child2 {
+    flex: 1;
+}
+
+.main-child1 {
+    text-align: right;
+    padding: 0 2rem 0 1rem;
+}
+
+.main-child2 {
+    padding: 0 10rem 0 0;
+}
+
+.main-child2 h2 {
+    font-size: 3rem;
+    font-weight: 800;
+}
+
+.main-child2 p {
+    font-size: 1.2rem;
+}
+
+.editorial {
+    display: block;
+    width: 100%;
+    height: 100px;
+    max-height: 100px;
+    z-index: 5;
+    bottom: 0;
+}
+
+.parallax1>use {
+    animation: move-forever1 10s linear infinite;
+
+    &:nth-child(1) {
+        animation-delay: -2s;
+    }
+}
+
+.parallax2>use {
+    animation: move-forever2 8s linear infinite;
+
+    &:nth-child(1) {
+        animation-delay: -2s;
+    }
+}
+
+.parallax3>use {
+    animation: move-forever3 6s linear infinite;
+
+    &:nth-child(1) {
+        animation-delay: -2s;
+    }
+}
+
+.parallax4>use {
+    animation: move-forever4 4s linear infinite;
+
+    &:nth-child(1) {
+        animation-delay: -2s;
+    }
+}
+
+@keyframes move-forever1 {
+    0% {
+        transform: translate(85px, 0%);
+    }
+
+    100% {
+        transform: translate(-90px, 0%);
+    }
+}
+
+@keyframes move-forever2 {
+    0% {
+        transform: translate(-90px, 0%);
+    }
+
+    100% {
+        transform: translate(85px, 0%);
+    }
+}
+
+@keyframes move-forever3 {
+    0% {
+        transform: translate(85px, 0%);
+    }
+
+    100% {
+        transform: translate(-90px, 0%);
+    }
+}
+
+@keyframes move-forever4 {
+    0% {
+        transform: translate(-90px, 0%);
+    }
+
+    100% {
+        transform: translate(85px, 0%);
+    }
+}
+
+
+@keyframes floating {
+    0% {
+        transform: translate(0, 0px);
+    }
+
+    50% {
+        transform: translate(0, 15px);
+    }
+
+    100% {
+        transform: translate(0, -0px);
+    }
+}
+
+@media (max-width: 900px) {
+    .container {
+        flex-direction: column;
+        padding: 5rem 1.5rem 0 1.5rem;
+        /* text-align: center; */
+    }
+
+    .main {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .child1 {
+        width: 100%;
+        padding: 0;
+    }
+
+    .shape1 {
+
+        width: 30%;
+    }
+
+    .shape2 {
+
+        width: 30%;
+        position: absolute;
+        top: 75%;
+        right: 5%;
+    }
+
+    .child1 h1 {
+        color: #fff;
+        font-weight: 900;
+        font-size: 5.5rem;
+        text-shadow: -1px -1px 2px rgba(255, 255, 255, 0.55);
+    }
+
+    .main-child2 {
+        padding: 0 0rem 0 0;
+    }
+
+    .main-child1 {
+        text-align: center;
+        padding: 0 0 0 0;
+    }
+
+    .main-child1 {
+        width: 100%;
+    }
+
+    .main-child2 h2 {
+        font-size: 2.5rem;
+        font-weight: 800;
+
+    }
+
+    .main-child2 p {
+        margin-top: 0.2rem;
+        font-size: 1rem;
+    }
+
+}
+
+/* -----------------------------------Srollbar---------------------
+ */
+
+body::-webkit-scrollbar {
+    width: 0.6rem;
+    background-color: transparent;
+}
+
+body::-webkit-scrollbar-thumb {
+    border-radius: 50px;
+    background: #f461c1;
+}
